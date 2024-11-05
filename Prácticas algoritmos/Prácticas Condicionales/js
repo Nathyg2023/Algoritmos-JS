@@ -1,0 +1,40 @@
+// imaginemos que tenemos una tienda y queremos decirle a los clientes si esta tienda on line esta abierta hoy o no. 
+// los dias de semana abrimos a las 11
+// fines de semana a las 9
+
+// si un cliente entra al sitio web, para consultar si esta abierto hoy  o no. que necesitamos
+
+//saber el dia actual
+const dia = 5; 
+const horaActual = 10;
+
+let horaApertura;
+let mensaje; 
+
+
+//primero evaluar el dia saber si es fin de semana o no 
+if (dia === 0 || dia === 6) // aqui estoy diciendo si dia es exactamente igual a dom o a sab.
+{
+    console.log('Fin de semana');
+    horaApertura = 9;
+} else {
+    console.log('dia de semana');
+    horaApertura = 11;
+}
+
+
+if (horaActual >= horaApertura) {
+    mensaje = 'Esta abierto';
+} else {
+    mensaje = 'Esta cerrado, hoy abrimos a las ${horaApertura}';
+}
+
+
+
+const otraSolucion = (horaApertura, mensaje) => {
+    return (dia === 0 || dia === 6) ? horaApertura{mensaje} : horaApertura {mensaje}
+}
+
+console.log(otraSolucion(9, "Fin de semana"));
+console.log(otraSolucion(11,"Dia de semana"));
+
